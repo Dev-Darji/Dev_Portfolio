@@ -98,18 +98,29 @@ export function HeroSection() {
           </span>
         </motion.h1>
 
-        {/* Animated Typewriter Headline */}
+        {/* Headline: Static on Mobile, Animated Typewriter on Desktop */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.15 }}
-          className="text-xl sm:text-3xl md:text-4xl font-extrabold text-slate-100 tracking-tight max-w-4xl leading-snug mb-3 min-h-[38px] sm:min-h-[48px] flex items-center justify-center flex-wrap gap-2"
+          className="text-xl sm:text-3xl md:text-4xl font-extrabold text-slate-100 tracking-tight max-w-4xl leading-snug mb-3 flex items-center justify-center"
         >
-          <span className="text-slate-300">We Engineer</span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300">
-            {displayText}
-          </span>
-          <span className="inline-block w-0.5 h-6 sm:h-8 bg-blue-400 animate-pulse ml-0.5" />
+          {/* Mobile Static Text */}
+          <div className="block sm:hidden text-center">
+            <span className="text-slate-300">We Engineer </span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300">
+              Enterprise SaaS & Web Applications.
+            </span>
+          </div>
+
+          {/* Desktop Animated Typewriter */}
+          <div className="hidden sm:flex items-center justify-center flex-wrap gap-2 min-h-[48px]">
+            <span className="text-slate-300">We Engineer</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-300">
+              {displayText}
+            </span>
+            <span className="inline-block w-0.5 h-6 sm:h-8 bg-blue-400 animate-pulse ml-0.5" />
+          </div>
         </motion.div>
 
         {/* Sub-positioning description */}
