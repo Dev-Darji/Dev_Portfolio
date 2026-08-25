@@ -127,7 +127,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.25 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-3xl w-full mb-6 font-mono text-xs text-left"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-3xl w-full mb-7 sm:mb-8 font-mono text-xs text-left"
         >
           <div className="bg-slate-900/80 p-3 rounded-2xl border border-white/10 shadow-sm flex items-center gap-2.5">
             <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
@@ -167,7 +167,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto mt-2 sm:mt-4"
         >
           <a
             href="#contact"
@@ -192,7 +192,7 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-8"
+          className="mt-12 sm:mt-16"
         >
           <a
             href="#work"
