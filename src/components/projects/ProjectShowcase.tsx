@@ -141,7 +141,7 @@ export function ProjectShowcase() {
                               href={project.liveUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex-1 max-w-sm mx-3 bg-slate-900/90 hover:bg-slate-800 rounded-lg px-3 py-1.5 text-[11px] font-mono text-slate-400 hover:text-blue-300 flex items-center gap-2 truncate border border-white/10 hover:border-blue-500/50 transition-all group/link cursor-pointer shadow-sm"
+                              className="hidden sm:flex flex-1 max-w-sm mx-3 bg-slate-900/90 hover:bg-slate-800 rounded-lg px-3 py-1.5 text-[11px] font-mono text-slate-400 hover:text-blue-300 items-center gap-2 truncate border border-white/10 hover:border-blue-500/50 transition-all group/link cursor-pointer shadow-sm"
                               title="Click to open live website"
                             >
                               <span className="relative flex h-2 w-2 shrink-0">
