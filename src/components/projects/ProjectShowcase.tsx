@@ -2,14 +2,12 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { projectsData, Project } from "@/data/projects";
+import { projectsData } from "@/data/projects";
 import { ScrollReveal } from "../motion/ScrollReveal";
-import { CaseStudyModal } from "./CaseStudyModal";
 import { VittaInteractiveDemo } from "./VittaInteractiveDemo";
-import { Layers, ArrowUpRight, Sparkles, ExternalLink, Globe, CheckCircle2, Image as ImageIcon, Laptop } from "lucide-react";
+import { ArrowUpRight, Sparkles, Globe, CheckCircle2, Laptop } from "lucide-react";
 
 export function ProjectShowcase() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState<{ [key: string]: number }>({
     vitta: 0,
     "elicit-interior": 0,
@@ -31,10 +29,10 @@ export function ProjectShowcase() {
           <span className="text-xs font-mono font-semibold tracking-widest text-blue-400 uppercase bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-500/25">
             Proven Client Deployments
           </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white dark:text-white light:text-slate-900 mt-4 mb-4">
-            Client Solutions & <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-400">Production Case Studies.</span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-4 mb-4">
+            Client Solutions & <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-400">Live Platforms.</span>
           </h2>
-          <p className="text-slate-400 dark:text-slate-400 light:text-slate-600 text-base sm:text-lg">
+          <p className="text-slate-400 text-base sm:text-lg">
             Real production software engineered for high performance, custom CMS control, and seamless user experiences.
           </p>
         </ScrollReveal>
@@ -48,11 +46,11 @@ export function ProjectShowcase() {
             return (
               <ScrollReveal key={project.id} delay={0.1 * idx} direction="up">
                 <div
-                  className={`glass-card rounded-3xl p-6 sm:p-9 border border-white/10 light:border-black/10 relative overflow-hidden bg-gradient-to-br ${project.artDirection.bgGradient} hover:border-blue-500/40 transition-all shadow-2xl`}
+                  className={`glass-card rounded-3xl p-6 sm:p-9 border border-white/10 relative overflow-hidden bg-gradient-to-br ${project.artDirection.bgGradient} hover:border-blue-500/40 transition-all shadow-2xl`}
                 >
                   {/* Flagship Tag */}
                   {project.isFlagship && (
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-300 dark:text-blue-300 light:text-blue-800 text-xs font-mono mb-4 backdrop-blur-sm shadow-md">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-300 text-xs font-mono mb-4 backdrop-blur-sm shadow-md">
                       <Sparkles size={12} className="text-blue-400" />
                       <span>Flagship Client Architecture</span>
                     </div>
@@ -63,58 +61,50 @@ export function ProjectShowcase() {
                     {/* Left Info Panel */}
                     <div className="lg:col-span-5 space-y-4">
                       <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
-                        <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-slate-900/90 dark:bg-slate-900/90 light:bg-slate-200 text-blue-300 dark:text-blue-300 light:text-blue-800 border border-blue-500/20 whitespace-nowrap shrink-0">
+                        <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-slate-900/90 text-blue-300 border border-blue-500/20 whitespace-nowrap shrink-0">
                           {project.category}
                         </span>
-                        <span className="text-xs font-mono text-slate-400 dark:text-slate-400 light:text-slate-600 whitespace-nowrap">• {project.industry}</span>
+                        <span className="text-xs font-mono text-slate-400 whitespace-nowrap">• {project.industry}</span>
                       </div>
 
-                      <h3 className="text-3xl font-extrabold text-white dark:text-white light:text-slate-900 tracking-tight">
+                      <h3 className="text-3xl font-extrabold text-white tracking-tight">
                         {project.title}
                       </h3>
 
-                      <p className="text-sm font-mono text-blue-300 dark:text-blue-300 light:text-blue-600 font-medium">
+                      <p className="text-sm font-mono text-blue-300 font-medium">
                         {project.tagline}
                       </p>
 
-                      <p className="text-sm text-slate-300 dark:text-slate-300 light:text-slate-700 leading-relaxed">
+                      <p className="text-sm text-slate-300 leading-relaxed">
                         {project.summary}
                       </p>
 
                       {/* Technology Badges */}
                       <div className="flex flex-wrap gap-1.5 pt-1">
                         {project.technologies.map((tech) => (
-                          <span key={tech} className="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-900/90 dark:bg-slate-900/90 light:bg-slate-200 text-slate-300 dark:text-slate-300 light:text-slate-700 border border-white/10 light:border-black/10">
+                          <span key={tech} className="text-[11px] font-mono px-2.5 py-1 rounded-md bg-slate-900/90 text-slate-300 border border-white/10">
                             {tech}
                           </span>
                         ))}
                       </div>
 
-                      {/* Action Buttons: Visit Live Site + Case Study */}
+                      {/* Action Buttons: Visit Live Site */}
                       <div className="pt-3 flex flex-wrap items-center gap-3">
                         <a
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-semibold shadow-lg shadow-blue-600/25 transition-all flex items-center gap-2 hover:scale-[1.02] group"
+                          className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-semibold shadow-lg shadow-blue-600/25 transition-all flex items-center gap-2 hover:scale-[1.02] group"
                         >
-                          <Globe size={13} className="text-sky-300 animate-spin [animation-duration:6s]" />
+                          <Globe size={14} className="text-sky-300 animate-spin [animation-duration:6s]" />
                           <span>Visit Live Platform</span>
                           <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </a>
 
-                        <button
-                          onClick={() => setSelectedProject(project)}
-                          className="px-4 py-2.5 rounded-full bg-slate-900/90 dark:bg-slate-900/90 light:bg-white hover:bg-slate-800 text-slate-200 dark:text-slate-200 light:text-slate-800 text-xs font-semibold border border-white/15 hover:border-blue-500/50 transition-all flex items-center gap-2 cursor-pointer shadow-md"
-                        >
-                          <Layers size={14} className="text-blue-400" />
-                          <span>Case Study</span>
-                        </button>
-
                         {project.id === "vitta" && (
                           <button
                             onClick={() => setShowVittaSimulator(!showVittaSimulator)}
-                            className="px-3.5 py-2.5 rounded-full bg-slate-900/80 hover:bg-slate-800 text-sky-400 text-xs font-mono border border-sky-500/30 transition-all flex items-center gap-1.5 cursor-pointer"
+                            className="px-4 py-3 rounded-full bg-slate-900/80 hover:bg-slate-800 text-sky-400 text-xs font-mono border border-sky-500/30 transition-all flex items-center gap-1.5 cursor-pointer shadow-md"
                           >
                             <Laptop size={13} />
                             <span>{showVittaSimulator ? "Show Screenshots" : "Test Live Ledger"}</span>
@@ -159,7 +149,7 @@ export function ProjectShowcase() {
                                 <button
                                   key={i}
                                   onClick={() => toggleImage(project.id, i)}
-                                  className={`px-2 py-0.5 rounded cursor-pointer transition-colors ${
+                                  className={`px-2.5 py-1 rounded cursor-pointer transition-colors ${
                                     currentImgIdx === i
                                       ? "bg-blue-600 text-white font-bold"
                                       : "text-slate-400 hover:text-white"
@@ -199,12 +189,6 @@ export function ProjectShowcase() {
         </div>
 
       </div>
-
-      {/* Case Study Deep-Dive Modal Overlay */}
-      <CaseStudyModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
     </section>
   );
 }

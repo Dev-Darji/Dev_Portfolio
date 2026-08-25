@@ -185,7 +185,7 @@ export function HeroSection() {
             className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-semibold text-xs border border-white/15 hover:border-blue-500/50 transition-all flex items-center justify-center gap-2 hover:scale-[1.02] shadow-lg"
           >
             <Code2 size={14} className="text-blue-400" />
-            <span>Explore Client Case Studies</span>
+            <span>Explore Client Solutions</span>
           </a>
         </motion.div>
 
