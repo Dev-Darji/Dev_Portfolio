@@ -20,7 +20,7 @@ export function AboutDev() {
             Enterprise Leadership & Profile
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-4 mb-4">
-            About D&D Solutions & <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-400">Leadership.</span>
+            About D&D Web Studio & <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-400">Leadership.</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
             Meet the founding partners, engineering standards, and enterprise delivery guarantees.
@@ -77,7 +77,7 @@ export function AboutDev() {
                       D&D
                     </div>
                     <div className="text-[10px] font-mono text-blue-400/90 mt-1 uppercase tracking-widest">
-                      Solutions
+                      Web Studio
                     </div>
                     <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
                   </div>
@@ -153,7 +153,7 @@ export function AboutDev() {
                   Founding Leadership & <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-400">Technical Partners</span>
                 </h3>
                 <p className="text-xs font-mono text-slate-400">
-                  D&D Solutions is led by Co-Founders Dev Darji and Deep Gadhiya.
+                  D&D Web Studio is led by Co-Founders Dev Darji and Deep Gadhiya.
                 </p>
               </div>
 

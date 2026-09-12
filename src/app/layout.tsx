@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: siteConfig.seo.description,
   metadataBase: new URL(siteConfig.canonicalUrl),
   keywords: [
-    "D&D Solutions", "Enterprise Software Engineering", "Custom SaaS Development",
+    "D&D Web Studio", "Enterprise Software Engineering", "Custom SaaS Development",
     "Full-Stack Web Applications", "Next.js", "React.js", "Node.js", "TypeScript",
     "Applied AI Solutions", "RAG Systems", "Cloud Architecture", "Digital Transformation"
   ],

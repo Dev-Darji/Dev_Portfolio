@@ -116,7 +116,7 @@ export function CaseStudyModal({ project, onClose }: CaseStudyModalProps) {
               </div>
 
               <div>
-                <h3 className="text-sm font-mono text-indigo-400 uppercase tracking-widest mb-3">D&D Solutions Engineering Scope</h3>
+                <h3 className="text-sm font-mono text-indigo-400 uppercase tracking-widest mb-3">D&D Web Studio Engineering Scope</h3>
                 <div className="p-4 rounded-xl bg-blue-950/30 border border-blue-500/20 text-xs text-slate-300 leading-relaxed">
                   {project.devContribution}
                 </div>

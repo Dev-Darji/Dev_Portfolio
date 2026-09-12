@@ -83,10 +83,10 @@ export function HeroSection() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
           </span>
           <ShieldCheck size={14} className="text-blue-400" />
-          <span className="text-blue-400 font-medium">Enterprise Software Consultancy</span>
+          <span className="text-blue-400 font-medium">Enterprise Web Studio</span>
         </motion.div>
 
-        {/* Corporate Headline: D&D Solutions */}
+        {/* Corporate Headline: D&D Web Studio */}
         <motion.h1
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -94,7 +94,7 @@ export function HeroSection() {
           className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-3 font-sans select-none"
         >
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-slate-400">
-            D&D Solutions
+            D&D Web Studio
           </span>
         </motion.h1>
 

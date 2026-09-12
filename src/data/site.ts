@@ -1,14 +1,14 @@
 export const siteConfig = {
-  name: "D&D Solutions",
+  name: "D&D Web Studio",
   shortName: "D&D",
-  tagline: "Enterprise Digital Engineering & Scalable SaaS Consultancy",
+  tagline: "Enterprise Digital Engineering & Modern Web Studio",
   title: "Full-Stack Software Engineering & Applied AI Solutions",
-  role: "Enterprise Software Agency & Digital Transformation",
+  role: "Enterprise Software & Web Studio",
   location: "Surat, Gujarat, India",
   email: "devdarji1828@gmail.com",
   phone: "+91 9104635945",
   secondaryPhone: "+91 6353935950",
-  canonicalUrl: "https://dandd-solutions.com",
+  canonicalUrl: "https://dandd-webstudio.com",
   
   partners: [
     {
@@ -30,7 +30,7 @@ export const siteConfig = {
   positioning: {
     primary: "We architect, engineer, and scale mission-critical digital products.",
     expanded: "From enterprise SaaS platforms and real-time business applications to custom AI agents and workflow automation systems.",
-    intro: "D&D Solutions is a modern digital engineering consultancy founded by Dev Darji and Deep Gadhiya, specializing in enterprise web applications, scalable SaaS architectures, and applied AI systems. We partner with businesses to transform complex operational requirements into high-performing, resilient digital software.",
+    intro: "D&D Web Studio is a modern digital engineering and web studio founded by Dev Darji and Deep Gadhiya, specializing in enterprise web applications, scalable SaaS architectures, and applied AI systems. We partner with businesses to transform complex operational requirements into high-performing, resilient digital software.",
   },
 
   guarantees: [
@@ -49,7 +49,7 @@ export const siteConfig = {
   ],
 
   seo: {
-    title: "D&D Solutions — Enterprise Software Engineering & SaaS Consultancy",
-    description: "D&D Solutions delivers custom enterprise SaaS platforms, high-performance web applications, and applied AI automation systems built for scale and reliability.",
+    title: "D&D Web Studio — Enterprise Web Applications & SaaS Engineering",
+    description: "D&D Web Studio delivers custom enterprise SaaS platforms, high-performance web applications, and applied AI automation systems built for scale and reliability.",
   }
 };

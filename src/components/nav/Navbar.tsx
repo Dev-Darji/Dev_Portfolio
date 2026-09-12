@@ -33,7 +33,7 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Monogram: D&D Solutions */}
+        {/* Brand Monogram: D&D Web Studio */}
         <a
           href="#"
           className="group flex items-center gap-2.5 text-lg font-bold tracking-tight text-white focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg px-1"
@@ -44,9 +44,6 @@ export function Navbar() {
           </div>
           <span className="font-bold text-slate-100 tracking-tight">
             {siteConfig.name}
-          </span>
-          <span className="hidden sm:inline-block text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
-            Consultancy
           </span>
         </a>
 

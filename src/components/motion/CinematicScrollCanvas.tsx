@@ -99,7 +99,7 @@ function RightEngineeringPrism() {
   );
 }
 
-// Left Crystalline Engineering Node (Smaller, Lower Below Center)
+// Left Crystalline Engineering Node (Matching Right Prism Symmetrically)
 function LeftEngineeringPrism() {
   const meshRef = useRef<THREE.Group>(null!);
   const { smoothProgress } = useScrollTimeline();
@@ -109,27 +109,27 @@ function LeftEngineeringPrism() {
     const progress = smoothProgress ? smoothProgress.get() : 0;
 
     if (meshRef.current) {
-      meshRef.current.rotation.y = -t * 0.22 - progress * 1.5;
-      meshRef.current.rotation.x = -t * 0.14;
-      meshRef.current.position.y = -1.35 + Math.sin(t * 0.75 + 1) * 0.12;
+      meshRef.current.rotation.y = -t * 0.2 - progress * 1.5;
+      meshRef.current.rotation.x = t * 0.15;
+      meshRef.current.position.y = 1.25 + Math.sin(t * 0.8 + Math.PI) * 0.12;
     }
   });
 
   return (
-    <group ref={meshRef} position={[-5.8, -1.35, -1.8]} scale={0.75}>
+    <group ref={meshRef} position={[-5.8, 1.25, -1.8]}>
       <mesh>
-        <octahedronGeometry args={[1.0, 0]} />
+        <octahedronGeometry args={[1.15, 0]} />
         <meshStandardMaterial
           color="#0f172a"
           emissive="#38bdf8"
-          emissiveIntensity={0.6}
+          emissiveIntensity={0.65}
           roughness={0.2}
           metalness={0.9}
           wireframe
         />
       </mesh>
       <mesh rotation={[-Math.PI / 4, 0, 0]}>
-        <torusGeometry args={[1.5, 0.015, 16, 48]} />
+        <torusGeometry args={[1.7, 0.015, 16, 48]} />
         <meshBasicMaterial color="#2563eb" transparent opacity={0.45} />
       </mesh>
     </group>
