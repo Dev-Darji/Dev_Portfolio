@@ -99,7 +99,7 @@ function RightEngineeringPrism() {
   );
 }
 
-// Left Crystalline Engineering Node (Matching Right Prism Symmetrically)
+// Left Crystalline Engineering Node (Slightly Lower & Proportional)
 function LeftEngineeringPrism() {
   const meshRef = useRef<THREE.Group>(null!);
   const { smoothProgress } = useScrollTimeline();
@@ -111,12 +111,12 @@ function LeftEngineeringPrism() {
     if (meshRef.current) {
       meshRef.current.rotation.y = -t * 0.2 - progress * 1.5;
       meshRef.current.rotation.x = t * 0.15;
-      meshRef.current.position.y = 1.25 + Math.sin(t * 0.8 + Math.PI) * 0.12;
+      meshRef.current.position.y = -0.65 + Math.sin(t * 0.8 + 1.5) * 0.12;
     }
   });
 
   return (
-    <group ref={meshRef} position={[-5.8, 1.25, -1.8]}>
+    <group ref={meshRef} position={[-5.8, -0.65, -1.8]} scale={0.88}>
       <mesh>
         <octahedronGeometry args={[1.15, 0]} />
         <meshStandardMaterial
